@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Control Power</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Control Power</h1>
+    <button class="{button_class}" onclick="togglePower()">Power is {state}</button>
+    <button class="setup" onclick="location.href='/setup'">...</button>
+    <script>
+        function togglePower() {
+            fetch('/toggle')
+                .then(response => response.text())
+                .then(data => location.reload());
+        }
+    </script>
+</body>
+</html>

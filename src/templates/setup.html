@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Setup</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Setup</h1>
+    <form method="POST" action="/change_password">
+        <h2>Change Password</h2>
+        <input type="password" name="new_password" placeholder="New Password" required>
+        <button type="submit">Change Password</button>
+    </form>
+    <form method="POST" action="/network_config">
+        <h2>Network Configuration</h2>
+        <label>Network Mode:</label>
+        <select name="network_mode">
+            <option value="dhcp">DHCP</option>
+            <option value="static">Static</option>
+        </select><br>
+        <label>Static IP:</label><input type="text" name="static_ip"><br>
+        <label>Subnet:</label><input type="text" name="static_subnet"><br>
+        <label>Gateway:</label><input type="text" name="static_gateway"><br>
+        <label>DNS:</label><input type="text" name="static_dns"><br>
+        <label>NTP Server:</label><input type="text" name="ntp_server"><br>
+        <button type="submit">Save Network Settings</button>
+    </form>
+    <a href="/">Return to Control</a>
+</body>
+</html>
